@@ -18,14 +18,14 @@ function Hero() {
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <a
           className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-purple-800 focus:outline-none focus:ring active:bg-primary sm:w-auto"
-          href="#"
+          href="/dashboard"
         >
           Create AI Form
         </a>
 
         <a
           className="block w-full rounded px-12 py-3 text-sm font-medium text-primary shadow hover:text-purple-800 focus:outline-none focus:ring active:text-primary sm:w-auto"
-          href="#"
+          href="/dashboard"
         >
           Learn More
         </a>
