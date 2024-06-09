@@ -11,7 +11,10 @@ function Hero() {
       </h1>
 
       <p className="mt-4 sm:text-xl/relaxed text-gray-500">
-      Streamline your data collection with Formio – Create, customize, and connect forms with ease, then watch as responses flow seamlessly into your spreadsheet, ready for action!
+      Streamline your data collection with Formio
+      </p>
+      <p className=" sm:text-xl/relaxed text-gray-500">
+      Create, customize, and connect forms with ease, then watch as responses flow seamlessly into your spreadsheet, ready for action!
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
