@@ -11,8 +11,7 @@ function Hero() {
       </h1>
 
       <p className="mt-4 sm:text-xl/relaxed text-gray-500">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-        numquam ea!
+      Streamline your data collection with Formio – Create, customize, and connect forms with ease, then watch as responses flow seamlessly into your spreadsheet, ready for action!
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
