@@ -123,7 +123,7 @@ function EditForm({ params }) {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div className="border rounded-lg p-5 h-screen shadow-md">
+        <div className="border rounded-lg p-5 shadow-md">
           <Controller
             seletedTheme={(value) => {
               updateControllerFields(value, "theme");

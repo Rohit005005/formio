@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useUser } from "@clerk/nextjs";
 import { db } from "@/configs";
-import { jsonForms } from "@/configs/schema";
+import { jsonForms, userResponses } from "@/configs/schema";
 import { and, eq } from "drizzle-orm";
 import { toast } from "sonner";
 import { RWebShare } from "react-web-share";
@@ -31,6 +31,15 @@ function FormListItem({ jsonForm, formRecord, refreshData }) {
           eq(jsonForms.createdBy, user?.primaryEmailAddress?.emailAddress)
         )
       );
+    if (result) {
+      toast("Form Deleted !!!");
+      refreshData();
+    }
+  };
+  const onDeleteForm2 = async () => {
+    const result = await db
+      .delete(userResponses)
+      .where(and(eq(userResponses.formRef, formRecord.id)));
     if (result) {
       toast("Form Deleted !!!");
       refreshData();
@@ -54,7 +63,12 @@ function FormListItem({ jsonForm, formRecord, refreshData }) {
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={() => onDeleteForm()}>
+              <AlertDialogAction
+                onClick={ async() => {
+                  await onDeleteForm2();
+                  onDeleteForm();
+                }}
+              >
                 Continue
               </AlertDialogAction>
             </AlertDialogFooter>

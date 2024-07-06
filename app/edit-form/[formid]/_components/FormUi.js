@@ -68,19 +68,34 @@ function FormUi({
 
   const onFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
 
-    const result = await db.insert(userResponses).values({
-      jsonResponse: formData,
-      createdAt: moment().format("DD/MM/yyy"),
-      formRef: formId,
-    });
+    if (enableSignIn) {
+      const result = await db.insert(userResponses).values({
+        jsonResponse: formData,
+        createdAt: moment().format("DD/MM/yyy"),
+        formRef: formId,
+        createdBy: user?.primaryEmailAddress?.emailAddress,
+      });
 
-    if (result) {
-      formRef.reset();
-      toast("Response Submitted Successfully !!");
+      if (result) {
+        formRef.reset();
+        toast("Response Submitted Successfully !!");
+      } else {
+        toast("Error while saving your form !!");
+      }
     } else {
-      toast("Error while saving your form !!");
+      const result = await db.insert(userResponses).values({
+        jsonResponse: formData,
+        createdAt: moment().format("DD/MM/yyy"),
+        formRef: formId,
+      });
+
+      if (result) {
+        formRef.reset();
+        toast("Response Submitted Successfully !!");
+      } else {
+        toast("Error while saving your form !!");
+      }
     }
   };
 
@@ -191,7 +206,7 @@ function FormUi({
         </button>
       ) : (
         <Button>
-          <SignInButton >Sign In Before Submit</SignInButton>
+          <SignInButton>Sign In Before Submit</SignInButton>
         </Button>
       )}
     </form>

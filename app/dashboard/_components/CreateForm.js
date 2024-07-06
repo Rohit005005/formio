@@ -26,7 +26,7 @@ function CreateForm() {
   const route = useRouter();
 
   const PROMPT =
-    ",On Basis of description please give form in json format with formTitle, formHeading, formFields along with fieldName, fieldTitle, placeholder, fieldLabel, fieldType, required fields in Json format. Only give Json format in curly braces nothing else is needed, dont include '''json''' in it";
+    ",On Basis of description please give form in json format with formTitle, formHeading, formFields along with fieldName, fieldTitle, placeholder, fieldLabel, fieldType, required fields in Json format. Only give Json format in curly braces nothing else is needed, dont include '''json''' in it. Also dont include any submit button field";
 
   async function onFormCreate() {
     setLoading(true);
