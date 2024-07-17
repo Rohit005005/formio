@@ -72,7 +72,7 @@ function SideNav() {
 
   return (
     <div className="h-screen shadow-md border ">
-      {src <= 625 ? (
+      {src <= 505 ? (
         <div className="p-5">
           {menuList.map((menu, index) => (
             <Link
