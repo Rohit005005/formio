@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { db } from "@/configs";
@@ -16,6 +17,11 @@ import React, { useEffect, useState } from "react";
 import CreateForm from "./CreateForm";
 
 function SideNav() {
+  let src;
+  useEffect(() => {
+    src = window.innerWidth;
+    console.log(src);
+  }, []);
   const menuList = [
     {
       id: 1,
@@ -66,21 +72,37 @@ function SideNav() {
 
   return (
     <div className="h-screen shadow-md border ">
-      <div className="p-5">
-        {menuList.map((menu, index) => (
-          <Link
-            href={menu.path}
-            key={index}
-            className={`flex items-center gap-3 p-3 mb-5 hover:bg-primary hover:text-white rounded-lg cursor-pointer text-gray-500 ${
-              path == menu.path && `bg-primary text-white`
-            }`}
-          >
-            <menu.icon />
-            {menu.name}
-          </Link>
-        ))}
-      </div>
-      <div className="fixed p-6 w-64">
+      {src <= 625 ? (
+        <div className="p-5">
+          {menuList.map((menu, index) => (
+            <Link
+              href={menu.path}
+              key={index}
+              className={`flex items-center gap-3 p-3 mb-5 hover:bg-primary hover:text-white rounded-lg cursor-pointer text-gray-500 ${
+                path == menu.path && `bg-primary text-white`
+              }`}
+            >
+              <menu.icon />
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div className="p-5">
+          {menuList.map((menu, index) => (
+            <Link
+              href={menu.path}
+              key={index}
+              className={`flex items-center gap-3 p-3 mb-5 hover:bg-primary hover:text-white rounded-lg cursor-pointer text-gray-500 ${
+                path == menu.path && `bg-primary text-white`
+              }`}
+            >
+              <menu.icon />
+              {menu.name}
+            </Link>
+          ))}
+        </div>
+      )}
+      <div className="p-6 w-64">
         <CreateForm />
         <div className="my-5">
           <Progress value={percentage}></Progress>

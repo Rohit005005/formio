@@ -23,7 +23,7 @@ function FormList() {
     console.log(result);
   };
   return (
-    <div className="mt-5 grid grid-cols-2 md:grid-cols-2 gap-5">
+    <div className="mt-5 grid lg:grid-cols-2 md:grid-cols-1 gap-5">
       {formList?.map((form, index) => (
         <div>
           <FormListItem

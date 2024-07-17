@@ -27,7 +27,7 @@ function Responses() {
       <h2 className="font-bold text-3xl flex items-center justify-between">
         Responses
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-5">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-5">
         {formList?.map((form, index) => (
           <FormItemListResponse
             formRecord={form}
