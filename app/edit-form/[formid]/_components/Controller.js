@@ -73,8 +73,8 @@ function Controller({ seletedTheme, selectedBackground,setSignInEnable }) {
       >
         {showMore > 6 ? "Show Less" : "Show More"}
       </Button>
-      <div className="flex gap-2 my-5 items-center mt-5">
-        <Checkbox onCheckedChange={(e) => setSignInEnable(e)} />
+      <div className="flex gap-2 my-5 items-center justify-center mt-5">
+        <Checkbox className="mb-6" onCheckedChange={(e) => setSignInEnable(e)} />
         <h2>Enable Social Authentication before submission of the form</h2>
       </div>
     </div>

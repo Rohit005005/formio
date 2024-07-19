@@ -23,12 +23,11 @@ function LiveAiForm({ params }) {
 
     setRecord(result[0]);
     setjsonform(JSON.parse(result[0].jsonform));
-    console.log(result);
   };
   return (
     <div
-      className="p-10 flex justify-center items-center"
-      style={{ backgroundImage: record?.background }}
+      className="p-10 flex justify-center items-center h-screen"
+      style={{ backgroundImage: record?.background ,backgroundSize:"cover"}}
     >
       {record && (
         <FormUi

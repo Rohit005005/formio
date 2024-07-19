@@ -6,8 +6,8 @@ import SideNav from "./_components/SideNav";
 
 function page() {
   return (
-    <div className="p-10">
-      <h2 className="font-bold text-3xl flex items-center justify-between">
+    <div className="sm:p-10 p-5">
+      <h2 className="font-bold sm:text-3xl text-xl flex items-center justify-between">
         Dashboard
         <CreateForm />
       </h2>

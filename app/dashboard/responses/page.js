@@ -23,8 +23,8 @@ function Responses() {
     setFormList(result);
   };
   return (
-    <div className="p-10">
-      <h2 className="font-bold text-3xl flex items-center justify-between">
+    <div className="sm:p-10 p-5">
+      <h2 className="font-bold sm:text-3xl text-xl flex items-center justify-between">
         Responses
       </h2>
       <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-5">

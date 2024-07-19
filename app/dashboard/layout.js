@@ -10,21 +10,21 @@ import {
 } from "@/components/ui/popover";
 
 import Image from "next/image";
-import { Instagram } from "lucide-react";
+import { Instagram, LinkedinIcon } from "lucide-react";
 
 function dashboardlayout({ children }) {
   return (
     <SignedIn>
       <div>
         <div className="flex">
-          <div className="w-64">
+          <div className="w-36 sm:w-64">
             <SideNav />
           </div>
           <div className=" w-full">{children}</div>
         </div>
         <div
           href={"/"}
-          className="flex items-center bg-primary bg-opacity-50 text-white py-1 px-2 rounded-md fixed bottom-5 right-5 cursor-pointer hover:bg-primary"
+          className="flex items-center bg-primary bg-opacity-50 text-white py-1 px-2 rounded-md fixed bottom-5 left-5 cursor-pointer hover:bg-primary"
         >
           <Popover>
             <PopoverTrigger className="flex items-center gap-2">
@@ -39,6 +39,13 @@ function dashboardlayout({ children }) {
             <PopoverContent className="w-full">
               <Link
                 className="flex gap-2"
+                href={"https://www.linkedin.com/in/rohit-dev005/"}
+              >
+                <LinkedinIcon className="text-primary" />
+                <p>LinkedIn</p>
+              </Link>
+              <Link
+                className="flex gap-2 mt-5"
                 href={"https://www.instagram.com/_me_rohitt._/"}
               >
                 <Instagram className="text-primary" />
