@@ -17,15 +17,14 @@ function Hero() {
   }, []);
   return (
     <section className="bg-gray-50 animate-fade">
-      <div className="mx-auto max-w-screen-xl px-4 py-10 lg:flex lg:h-screen">
-        <div className=" mx-auto text-center">
+      <div className=" max-w-screen-xl px-4 py-10 lg:flex">
+        <div className=" text-center">
           <div className="flex flex-col md:flex-row lg:flex-row gap-10">
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-3xl font-extrabold sm:text-5xl">
                 Create your form
                 <strong className="font-extrabold text-primary sm:block">
-                  {" "}
-                  In Seconds not Hours.{" "}
+                  In Seconds not Hours.
                 </strong>
               </h1>
 

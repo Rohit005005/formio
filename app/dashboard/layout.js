@@ -23,7 +23,6 @@ function dashboardlayout({ children }) {
           <div className=" w-full">{children}</div>
         </div>
         <div
-          href={"/"}
           className="flex items-center bg-primary bg-opacity-50 text-white py-1 px-2 rounded-md fixed bottom-5 left-5 cursor-pointer hover:bg-primary"
         >
           <Popover>
@@ -33,7 +32,7 @@ function dashboardlayout({ children }) {
                 src={"/PXL_20240207_142809828.jpg"}
                 width={30}
                 height={30}
-              />{" "}
+              />
               <p className="text-white text-xs">Made by Rohit</p>
             </PopoverTrigger>
             <PopoverContent className="w-full">
