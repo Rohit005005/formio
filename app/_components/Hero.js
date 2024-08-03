@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -39,11 +39,7 @@ function Hero() {
             </div>
 
             <div className="bg-white flex justify-center items-center h-[350px] md:h-[500px] lg:h-[500px] shadow-2xl p-5 ml-10 mr-10">
-              <Image
-                src={currentImage}
-                width={800}
-                height={800}
-              />
+              <Image src={currentImage} width={800} height={800} />
             </div>
           </div>
           <div className="mt-14 flex flex-wrap justify-center gap-4">
