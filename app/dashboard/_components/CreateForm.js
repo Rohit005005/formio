@@ -26,7 +26,60 @@ function CreateForm() {
   const route = useRouter();
 
   const PROMPT =
-    ",On Basis of description please give form in json format with formTitle, formHeading, formFields along with fieldName, fieldTitle, placeholder, fieldLabel, fieldType, required fields in Json format. Only give Json format in curly braces nothing else is needed, dont include '''json''' in it. Also dont include any submit button field and options for any field should be in array with just values in it not keys";
+    `,On Basis of description please give form in json format with formTitle, formHeading, formFields along with fieldName, fieldTitle, placeholder, fieldLabel, fieldType, required fields in Json format. Only give Json format in curly braces nothing else is needed, dont include '''json''' in it. Also dont include any submit button field and options for any field should be in array with just values in it not keys.
+    ---EXAMPLE---
+    {
+  "formTitle": "Candidate Interview Form",
+  "formHeading": "Candidate Information",
+  "formFields": [
+    {
+      "fieldName": "firstName",
+      "fieldTitle": "First Name",
+      "placeholder": "Enter your first name",
+      "fieldLabel": "First Name",
+      "fieldType": "text",
+      "required": true
+    },
+    {
+      "fieldName": "lastName",
+      "fieldTitle": "Last Name",
+      "placeholder": "Enter your last name",
+      "fieldLabel": "Last Name",
+      "fieldType": "text",
+      "required": true
+    },
+    {
+      "fieldName": "email",
+      "fieldTitle": "Email",
+      "placeholder": "Enter your email address",
+      "fieldLabel": "Email",
+      "fieldType": "email",
+      "required": true
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldTitle": "Phone Number",
+      "placeholder": "Enter your phone number",
+      "fieldLabel": "Phone Number",
+      "fieldType": "tel",
+      "required": true
+    },
+    {
+      "fieldName": "position",
+      "fieldTitle": "Position Applying For",
+      "placeholder": "Select position",
+      "fieldLabel": "Position Applying For",
+      "fieldType": "select",
+      "required": true,
+      "options": [
+        "Software Engineer",
+        "Data Analyst",
+        "Project Manager",
+        "Marketing Specialist"
+      ]
+    }
+  ]
+}`;
 
   async function onFormCreate() {
     setLoading(true);

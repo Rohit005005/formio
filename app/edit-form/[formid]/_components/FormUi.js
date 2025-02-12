@@ -103,7 +103,7 @@ function FormUi({
     <form
       ref={(e) => (formRef = e)}
       onSubmit={onFormSubmit}
-      className="border p-5 md:w-[600px] rounded-lg"
+      className="border p-5 md:w-[600px] rounded-lg h-full"
       data-theme={seletedTheme}
     >
       <h2 className="font-bold text-center text-2xl"> {jsonform?.formTitle}</h2>

@@ -15,6 +15,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import CreateForm from "./CreateForm";
+import { Sidebar } from "@/components/ui/sidebar";
+import Image from "next/image";
 
 function SideNav() {
   const menuList = [
@@ -66,7 +68,15 @@ function SideNav() {
   };
 
   return (
+    <Sidebar>
     <div className="h-screen shadow-md border ">
+      <Image
+                  className="m-5"
+                  src={"/logo.png"}
+                  width={180}
+                  height={100}
+                  alt="logo"
+                />
       <div className="sm:p-5 p-2">
         {menuList.map((menu, index) => (
           <Link
@@ -96,6 +106,7 @@ function SideNav() {
         </div>
       </div>
     </div>
+    </Sidebar>
   );
 }
 

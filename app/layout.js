@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -16,7 +15,6 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en" data-theme="light">
         <body className={inter.className}>
-          <Header />
           <Toaster />
           {children}
         </body>

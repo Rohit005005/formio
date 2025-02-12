@@ -1,22 +1,26 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
-import { List } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-function Header() {
+function LandingHeader() {
   const { user, isSignedIn } = useUser();
   const path = usePathname();
-  const { toggleSidebar } = useSidebar()
   return (
     !path.includes("aiform") && (
       <div className="p-5 border-b shadow-sm">
         <div className="flex items-center justify-between">
-        <List onClick={toggleSidebar}/>
+          <Image
+            className="ml-5"
+            src={"/logo.png"}
+            width={180}
+            height={100}
+            alt="logo"
+          />
 
           {isSignedIn ? (
             <div className="flex items-center gap-5">
@@ -36,4 +40,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default LandingHeader;

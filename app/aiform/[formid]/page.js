@@ -42,9 +42,9 @@ function LiveAiForm({ params }) {
       )}
       <Link
         href={"/"}
-        className="flex gap-2 items-center bg-black bg-opacity-10 text-white px-3 py-3 rounded-full fixed bottom-5 left-5 cursor-pointer "
+        className="flex gap-2 items-center bg-black bg-opacity-10 text-white px-3 py-3 rounded-full fixed bottom-5 left-5 cursor-pointer text-xs"
       >
-        <Image src={"/logo.png"} width={100} height={100} />
+        <Image src={"/logo.png"} width={50} height={50} />
         Built your own AI Form
       </Link>
     </div>
